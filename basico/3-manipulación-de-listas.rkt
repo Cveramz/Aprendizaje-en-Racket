@@ -33,3 +33,12 @@ Para tener un true o false se puede usar:
 Ahora que sabemos que en la lista tenemos un 2, la función nos
 tira un true.
 |#
+
+
+
+
+(define vacio empty)
+
+(define (append dato lista)
+  (cons dato lista))
+
