@@ -23,3 +23,22 @@
       (mylength (cdr lista) (+ resultado 1)) ;caso falso
       )
   )
+
+
+;EJERCICIO 2 CON LISTAS:
+;eliminar elementos de lista
+
+(define (remove-data lista elemento)
+  (if (null? lista) ;condicional
+      ;caso verdadero
+      lista
+      ;Fin caso verdadero
+
+      ;caso falso
+      (if (= (car lista) elemento) ;condicional
+          (remove-data (cdr lista) elemento) ;#t
+          ;Uniremos la cabeza con el resto usando un cons
+          (cons (car lista) (remove-data (cdr lista) elemento))
+          )
+      )
+  )
