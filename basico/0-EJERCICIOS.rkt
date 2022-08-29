@@ -42,3 +42,34 @@
           )
       )
   )
+
+
+;EJERCICIO 3 CON LISTAS:
+;realizar la sumatoria de todos los numeros de una lista
+;(se asume que todos los elementos serán numeros)
+
+(define (sumatoria lista resultado)
+  ;Resultado se ingresa como cero al llamar
+  (if (null? lista) ;verificamos si es nulo
+      resultado ;#t
+      (sumatoria (cdr lista) (+ resultado (car lista))) ;#f
+      )
+  )
+
+
+;EJERCICIO 4 CON LISTAS:
+;realizar la sumatoria de todos los numeros pares
+;(se asume que todos los elementos serán numeros)
+
+
+(define (sumatoria-par lista resultado)
+  ;Resultado se ingresa como cero al llamar
+  (if (null? lista) ;verificamos si es nulo
+      resultado ;#t
+      ;#f
+      (if (even? (car lista))
+                 (sumatoria-par (cdr lista) (+ resultado (car lista))) ;#t
+                 (sumatoria-par (cdr lista) resultado) ;#f
+                 )
+      )
+  )
