@@ -73,3 +73,19 @@
                  )
       )
   )
+
+
+
+;EJERCICIO 5 CON LISTAS:
+;retornar el elemento más grande de una lista
+
+(define (mymax lista dato)
+  (if(or (null? lista) (< (car lista) dato))
+      dato;#t
+      ;#f
+      (if (> (car lista) dato)
+          (mymax (cdr lista) (car lista));#t
+          (mymax (cdr lista) (dato));#f
+          )
+      )
+  )
