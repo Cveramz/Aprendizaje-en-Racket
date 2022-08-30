@@ -89,3 +89,20 @@
           )
       )
   )
+
+
+
+
+
+;EXTRAS:
+;(incompleto)
+;append que detecta si es lista o no, este en un futuro juntará dos listas o si es solo un elemento que lo agregue al principio
+
+(define (betterappend elemento lista)
+  (if (or (not(pair? elemento)) (not(list? elemento) )) ;no es ni par ni elemento
+      ;#verdadero, hacemos un cons simple
+      (cons elemento lista)
+      ;#falso
+      #f
+      )
+  )
