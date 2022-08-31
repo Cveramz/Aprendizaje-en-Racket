@@ -91,6 +91,25 @@
   )
 
 
+;EJERCICIO 6 CON LISTAS:
+;verificar si una lista está ordenada ascendentemente
+
+(define (ascendente? list)
+  (if (null? list)
+      #t ;#Caso verdadero, está ordenado
+      ;#F
+      (if (pair? (cdr list))
+          ;Si es lista:
+          (if (> (car list) (car(cdr list)))
+              #f
+              (ascendente? (cdr list))
+              )
+          ;Si no es lista:
+          #t
+          )
+      )
+  )
+
 
 
 
