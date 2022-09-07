@@ -111,6 +111,24 @@
   )
 
 
+;EJERCICIO 7 CON LISTAS:
+;Update elements (es como un map)
+;Crear función que edite elementos de lista según criterio
+;Entrada: list X filter X int
+;Salida: list
+;Tipo de recursividad: Recursión Natural
+
+(define (update lista filtro valor)
+  (if (null? lista) ;condicional
+      lista ;#t
+      (if (filtro (car lista)) ;#f, nuevo condicional
+          (cons valor (update (cdr lista) filtro valor)) ;#t
+          (cons (car lista) (update (cdr lista) filtro valor)) ;#f
+          )
+      )
+  )
+
+
 
 
 ;EXTRAS:
